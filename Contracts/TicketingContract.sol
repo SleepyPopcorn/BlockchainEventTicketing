@@ -1,14 +1,13 @@
 pragma solidity >=0.7.0 <0.9;
 
 contract TicketingSystem {
-
     address payable internal organizer;
 
     uint public ticketPrice;
+    uint public visitorLimit;
     uint public eventStartTime;
     uint public eventFinishTime;
-    uint public visitorLimit;
-
+    
     uint internal eventMinTime;
     uint internal expirationTime;
 
@@ -16,16 +15,15 @@ contract TicketingSystem {
 
     event eventCancelled(string errorMessage);
 
-    constructor(uint _ticketPrice, uint _visitorLimit, uint _eventStartTime, uint _eventFinishTime, uint _expirationTime){
+    constructor(uint _ticketPrice, uint _visitorLimit, uint _eventStartTime, uint _eventFinishTime){
         organizer = payable(msg.sender);
 
         ticketPrice = _ticketPrice;
         visitorLimit = _visitorLimit;
         eventStartTime = _eventStartTime;
         eventFinishTime = _eventFinishTime;
-        expirationTime = _expirationTime;
 
-        eventMinTime = ( (eventFinishTime - eventStartTime) * 30) / 100;
+        eventMinTime = ((eventFinishTime - eventStartTime) * 30) / 100;
         expirationTime = eventFinishTime + 1 days;
     }
 
@@ -37,16 +35,14 @@ contract TicketingSystem {
 
     Visitor[] public visitors;
 
-    modifier checkSeats(){
-        require(visitors.length < visitorLimit);
-        _;
-    }
-
-    modifier checkTime(){
-        require(block.timestamp < eventStartTime);
-        _;
-    }
-
     
+
+    // organizer name check function 
+    // also count when the visitor attend (inside of this function)
+
+
+    // when visitor leave he needs to *** Check oracle then decide***
+
+    // while checking leaving ppl check ratio of stayed/attended
 
 }
