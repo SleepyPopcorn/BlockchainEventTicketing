@@ -45,14 +45,15 @@
 				"type": "event"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "addressToHeldWei",
+				"inputs": [],
+				"name": "assignOracle",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "buyTicket",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -60,24 +61,6 @@
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
-						"name": "_surname",
-						"type": "string"
-					}
-				],
-				"name": "buyTicket",
-				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
@@ -123,12 +106,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "ticketPrice",
+				"name": "oracleAddress",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -136,7 +119,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "visitorLimit",
+				"name": "ticketPrice",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -151,26 +134,48 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "_userID",
 						"type": "uint256"
 					}
 				],
-				"name": "visitors",
+				"name": "visitorEnterCheck",
 				"outputs": [
 					{
 						"internalType": "string",
-						"name": "name",
+						"name": "",
 						"type": "string"
-					},
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_userID",
+						"type": "uint256"
+					}
+				],
+				"name": "visitorLeaveCheck",
+				"outputs": [
 					{
 						"internalType": "string",
-						"name": "surname",
+						"name": "",
 						"type": "string"
-					},
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "visitorLimit",
+				"outputs": [
 					{
-						"internalType": "address payable",
-						"name": "wallet",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -205,10 +210,10 @@
 	},
 	"sources": {
 		"TicketingContract.sol": {
-			"keccak256": "0x4b009cb5150c64716e92bd6776e109450ec9484eeae3eba3fb32c32be9f85557",
+			"keccak256": "0x0627831318ca8488c1153481fd15bd96d40a3ac2b4999936fda79e77ab1c5834",
 			"urls": [
-				"bzz-raw://f5e05855bc46789739658cb8c0215aeaed578fecb7d4e1d3e476a4a566b40855",
-				"dweb:/ipfs/QmU8xuH3MXsNkXBJuj8MLE9KVEZXbyNkMsW2Dy7fZK6Ubj"
+				"bzz-raw://2e70e0dd69c8d6f1313b419014b586c1d799bfbebada9745e448612729a4c028",
+				"dweb:/ipfs/QmWFRzJHLn69bUZ9GHYBKfUfNwHZQGUVpBq1Fm2VNbphJB"
 			]
 		}
 	},

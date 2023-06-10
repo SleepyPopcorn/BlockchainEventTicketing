@@ -225,10 +225,10 @@
 	},
 	"sources": {
 		"Contracts\\TicketingContract.sol": {
-			"keccak256": "0x7e9733d6e2c9caab175386826f6d845b56297834dd6143beb19af0172b3dd8e5",
+			"keccak256": "0x18c1c4c54b46acaa8b7e5dfe5b15e0ca45f0c97a5fd20de2f73d3a1ef85528f4",
 			"urls": [
-				"bzz-raw://fe81638e22d33a3ffeb8de6b21461d49d380ca321d5e864356dd2617cfaaa76b",
-				"dweb:/ipfs/QmRMJmoH3VmvTcSFAoevwEUz2gmYhdZLRK8f435pngyMCZ"
+				"bzz-raw://dc37c8cfca43f0c6c48f53cd5e810d5807d081ee5cab446795ff14b50df7644e",
+				"dweb:/ipfs/QmPtah2GFzZphRiwRE5rmTGZUd2iQ1oaVsqeHY6PuKbkuZ"
 			]
 		}
 	},
